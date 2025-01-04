@@ -1,3 +1,7 @@
-# My Second Post
+---
+title: My Second Post
+---
 
-This is my second post. I hope you like it.
+# {{ title }}
+
+This is my second post. I hope you like it...
