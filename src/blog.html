@@ -1,0 +1,9 @@
+---
+layout: base.liquid
+title: Blog
+---
+
+{% for post in collection.posts %}
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p>{{ post.content }}</p>
+{% endfor %}

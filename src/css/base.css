@@ -1,0 +1,95 @@
+@import url('colors.css');
+
+@font-face {
+    font-family: 'Kode';
+    src: url('/assets/fonts/kode/webfonts/Kode-Regular.woff2') format('woff2'),
+        url('/assets/fonts/kode/ttf/Kode-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PixelCode';
+    src: url('/assets/fonts/pixel-code/fonts/PixelCode.otf') format('otf'),
+        url('/assets/fonts/ttf/Kode-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Kode", sans-serif;
+    line-height: 1.6;
+    background-color: var(--desert-sand);
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--eggplant);
+    padding: 10px 20px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    border: 2px solid transparent;
+
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.page-title {
+    margin: 20px;
+}
+
+.menu a:hover {
+    border: 2px dotted var(--zomp);
+    color: var(--zomp);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+footer a {
+    color: var(--zomp);
+}
+
+footer img {
+    color: wheat;
+}
+
+footer {
+    background-color: var(--eggplant);
+    color: var(--silver);
+
+    padding: 10px;
+    text-align: center;
+}

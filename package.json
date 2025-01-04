@@ -1,0 +1,16 @@
+{
+  "name": "philippbarthdotme",
+  "version": "1.0.0",
+  "description": "Personal Website and Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "type": "module"
+}

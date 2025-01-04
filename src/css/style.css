@@ -1,0 +1,34 @@
+@import 'colors.css';
+
+
+.title-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.title-text {
+    margin: 0;
+    flex: 1;
+    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.title-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+
+.title-content img {
+    border-radius: 15px;
+    max-width: 100%;
+    height: 30vh;
+}
+
+
+@media (max-width: 800px) {
+    .title-content {
+        flex-direction: column;
+    }
+}
