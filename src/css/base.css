@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'PixelCode';
     src: url('/assets/fonts/pixel-code/fonts/PixelCode.otf') format('otf'),
-        url('/assets/fonts/ttf/Kode-Regular.ttf') format('ttf');
+        url('/assets/fonts/pixel-code/fonts/PixelCode.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,10 +21,25 @@ body {
     height: 100%;
 }
 
+header,
+footer {
+    font-family: "PixelCode", sans-serif;
+}
+
 body {
-    font-family: "Kode", sans-serif;
+    font-family: "PixelCode", sans-serif;
     line-height: 1.6;
-    background-color: var(--desert-sand);
+    background-color: var(--background-1);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "PixelCode", sans-serif;
 }
 
 body,
@@ -34,14 +49,31 @@ ul {
 }
 
 .navbar {
-    background-color: var(--eggplant);
-    padding: 10px 20px;
+    background-color: var(--background-2);
+    padding: 5vh;
+
 }
 
 .menu {
     display: flex;
     list-style-type: none;
     justify-content: space-around;
+    font-size: large;
+}
+
+.menu-item {
+    color: var(--highlight-2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hover-item {
+    color: transparent;
+}
+
+.hover-item-active {
+    color: var(--highlight-2);
 }
 
 .menu li {
@@ -49,9 +81,7 @@ ul {
 }
 
 .menu a {
-    border: 2px solid transparent;
-
-    color: white;
+    color: var(--highlight-2);
     text-decoration: none;
     padding: 10px 15px;
     display: block;
@@ -62,11 +92,6 @@ ul {
     margin: 20px;
 }
 
-.menu a:hover {
-    border: 2px dotted var(--zomp);
-    color: var(--zomp);
-}
-
 .page {
     display: flex;
     flex-direction: column;
@@ -74,12 +99,16 @@ ul {
 }
 
 .content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
     flex-grow: 1;
     padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 footer a {
-    color: var(--zomp);
+    color: var(--highlight-2);
 }
 
 footer img {
@@ -87,8 +116,8 @@ footer img {
 }
 
 footer {
-    background-color: var(--eggplant);
-    color: var(--silver);
+    background-color: var(--background-2);
+    color: var(--highlight-2);
 
     padding: 10px;
     text-align: center;
