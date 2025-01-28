@@ -4,7 +4,7 @@ function highlightCurrrentNavLink() {
 
   menuItems.forEach((item) => {
     const navLink = item.getElementsByTagName("a")[0];
-    if (currentUrl.includes(navLink.href)) {
+    if (currentUrl === navLink.href) {
       item
         .getElementsByClassName("hover-item")[0]
         .classList.add("hover-item-active");
