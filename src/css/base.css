@@ -1,36 +1,35 @@
-@import url('colors.css');
+@import url("colors.css");
 
 @font-face {
-    font-family: 'Kode';
-    src: url('/assets/fonts/kode/webfonts/Kode-Regular.woff2') format('woff2'),
-        url('/assets/fonts/kode/ttf/Kode-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Kode";
+  src: url("/assets/fonts/kode/webfonts/Kode-Regular.woff2") format("woff2"),
+    url("/assets/fonts/kode/ttf/Kode-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'PixelCode';
-    src: url('/assets/fonts/pixel-code/fonts/PixelCode.otf') format('otf'),
-        url('/assets/fonts/pixel-code/fonts/PixelCode.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "PixelCode";
+  src: url("/assets/fonts/pixel-code/fonts/PixelCode.otf") format("otf"),
+    url("/assets/fonts/pixel-code/fonts/PixelCode.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 header,
 footer {
-    font-family: "PixelCode", sans-serif;
+  font-family: "PixelCode", sans-serif;
 }
 
 body {
-    font-family: "PixelCode", sans-serif;
-    line-height: 1.6;
-    background-color: var(--background-1);
-
+  font-family: "PixelCode", sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-1);
 }
 
 h1,
@@ -39,89 +38,92 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "PixelCode", sans-serif;
+  font-family: "PixelCode", sans-serif;
 }
 
 body,
 ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-    background-color: var(--background-2);
-    padding: 5vh;
-
+  background-color: var(--background-2);
+  padding: 5vh;
 }
 
 .menu {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-around;
-    font-size: large;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  font-size: large;
 }
 
 .menu-item {
-    color: var(--highlight-2);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  color: var(--highlight-2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .hover-item {
-    color: transparent;
+  color: transparent;
+}
+
+.menu-item:hover .hover-item {
+  color: var(--highlight-2);
 }
 
 .hover-item-active {
-    color: var(--highlight-2);
+  color: var(--highlight-2);
 }
 
 .menu li {
-    margin: 0;
+  margin: 0;
 }
 
 .menu a {
-    color: var(--highlight-2);
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
+  color: var(--highlight-2);
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
 .page-title {
-    margin: 20px;
+  margin: 20px;
 }
 
 .page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: larger;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 80%;
-    margin: 0 auto;
+  font-family: "Kode", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 footer a {
-    color: var(--highlight-2);
+  color: var(--highlight-2);
 }
 
 footer img {
-    color: wheat;
+  color: wheat;
 }
 
 footer {
-    background-color: var(--background-2);
-    color: var(--highlight-2);
+  background-color: var(--background-2);
+  color: var(--highlight-2);
 
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
