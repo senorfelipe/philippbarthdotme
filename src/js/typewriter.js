@@ -1,27 +1,10 @@
-// class TypeWriter {
-//   constructor(text, speed = 100) {
-//     this.text = text;
-//     this.speed = speed;
-//     this.isDeleting = false;
-//   }
-
-//   type() {
-//     let index = 0;
-//     while (index < this.text.length) {
-//       setTimeout(() => {
-//         document.getElementById(this.elementId).innerHTML += this.text[index];
-//         index++;
-//       }, this.speed);
-//     }
-//   }
-// }
-
-var TxtType = function (el, toRotate, period) {
+var TxtType = function (el, toRotate, period, nRuns) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
   this.txt = "";
+  this.nRuns = nRuns;
   this.tick();
   this.isDeleting = false;
 };
@@ -55,6 +38,11 @@ TxtType.prototype.tick = function () {
   }
 
   setTimeout(function () {
+    const animationShouldStop =
+      that.loopNum + 1 / that.toRotate.length >= that.nRuns &&
+      that.txt === that.toRotate[that.toRotate.length - 1];
+    if (animationShouldStop) return;
+
     that.tick();
   }, delta);
 };
@@ -64,8 +52,9 @@ window.onload = function () {
   for (var i = 0; i < elements.length; i++) {
     var toRotate = elements[i].getAttribute("data-type");
     var period = elements[i].getAttribute("data-period");
+    var nRuns = elements[i].getAttribute("n-runs");
     if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
+      new TxtType(elements[i], JSON.parse(toRotate), period, nRuns);
     }
   }
   // INJECT CSS
