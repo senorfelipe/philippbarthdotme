@@ -6,7 +6,7 @@ title: Blog
 <link rel="stylesheet" href="/css/blog.css" />
 
 <div class="posts">
-  {% for post in collections.post %}
+  {% for post in collections.post reversed %}
   <div class="post-preview" onclick="window.location.href='{{ post.url }}'">
     <div class="post-head">
       <h3>{{ post.data.title }}</h3>

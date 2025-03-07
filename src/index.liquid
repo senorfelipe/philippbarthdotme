@@ -1,0 +1,48 @@
+---
+layout: base.liquid
+---
+
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/blog.css" />
+
+<!-- <h2  class="typewrite"  data-type='["Welcome, my friend :)", "Thanks for visiting my site!", "By the way, I am Philipp and..." ]'
+  data-period="2000"
+  n-runs="1"
+></h2> -->
+<div class="welcome-content">
+
+  <h2>Hey, my name is Philipp...</h2>
+
+  <p>
+    I am a Software Engineer from Germany focused on Fullstack Development with a  
+    heart for backend development in the
+    <b>Java</b>
+    and
+    <b>Python</b>
+    world.
+  </p>
+  <p>
+    My intention with this page is to
+    <b>represent</b>
+    some of the work I have done already, to
+    <b>share</b>
+    some expieriences while coding and to give some insights on my thoughts  
+    through my
+    <b>blog</b>. And next to that I almost felt the obligation as a programmer to  
+    have some sort of personal website.
+  </p>
+</div>
+
+<div>
+  <h3 style="text-align: center">Recent Posts</h3>
+  {% assign latest_posts = collections.post | reverse %}
+  {% for post in latest_posts limit:2 %}
+    <div class="post-preview" onclick="window.location.href='{{ post.url }}'">
+      <div class="post-head">
+        <h4>{{ post.data.title }}</h4>
+        <p>{{ post.page.date | formatDate }}</p>
+      </div>
+      <p>{{ post.content | preview }}</p>
+    </div>
+  {% endfor %}
+</div>

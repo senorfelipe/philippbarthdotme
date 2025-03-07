@@ -1,4 +1,10 @@
 
-.last-post-preview {
+.welcome-content {
     display: flex;
-}   
+    flex-direction: column;
+    align-items: center;
+    color: var(--highlight-2);
+    background-color: var(--background-2);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
