@@ -1,0 +1,18 @@
+---
+layout: base.liquid
+---
+<head>
+  <link rel="stylesheet" href="/css/post.css" />
+</head>
+
+
+<article>
+  <div class="blog-head">
+    <h1>{{ title }}</h1>
+    <span class="blog-date">{{ page.date | formatDate }}</span>
+  </div>
+
+  <div>
+    {{ content }}
+  </div>
+</article>

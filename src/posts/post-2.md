@@ -1,7 +1,6 @@
 ---
 title: My Second Post
+file: post-2
 ---
 
-# {{ title }}
-
-This is my second post. I hope you like it...
+This is my second blog post. And I have to say taht I have nothing to say right now.

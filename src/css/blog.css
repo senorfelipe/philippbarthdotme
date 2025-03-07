@@ -1,0 +1,21 @@
+
+.post-preview {
+    flex-direction: column;
+    border: 2px solid var(--background-2);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    margin-bottom: 15px;
+    transition: box-shadow .2s;
+    cursor: pointer;
+}
+
+.post-preview:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.post-head {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+}
