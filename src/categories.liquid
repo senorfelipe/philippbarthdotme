@@ -1,0 +1,47 @@
+---
+layout: base.liquid
+title: Blog
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "/blog/categories/{{ category | slugify }}/index.html"
+---
+
+<link rel="stylesheet" href="/css/blog.css" />
+
+{% assign posts = collections.post | filterByCategory: category %}
+<div class="posts">
+  <h2 style="text-align: center;">#{{ category }}</h2>
+  {% for post in posts reversed %}
+    <div class="post-preview" onclick="window.location.href='{{ post.url }}'">
+      <div class="post-head">
+        <h3 class="post-head-title">{{ post.data.title }}</h3>
+        <span class="post-head-date">{{ post.page.date | formatDate }}</span>
+      </div>
+      <p>{{ post.content | preview }}</p>
+    </div>
+  {% endfor %}
+
+  <div class="blog-nav">
+    {% if pagination.href.previous %}
+      <span class="nav active">
+        <a href=" {{ pagination.href.previous }}">Previous</a>
+      </span>
+    {% else %}
+      <span class="nav">
+        Previous
+      </span>
+    {% endif %}
+    <span>/</span>
+    {% if pagination.href.next %}
+      <span class="nav active">
+        <a href=" {{ pagination.href.next }}">Next</a>
+      </span>
+    {% else %}
+      <span class="nav">
+        Next
+      </span>
+    {% endif %}
+  </div>
+</div>

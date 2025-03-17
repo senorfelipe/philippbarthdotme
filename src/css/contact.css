@@ -1,0 +1,41 @@
+.contact-content {
+  width: 80%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: "White Rabbit", sans-serif;
+  padding: 10px;
+  margin: 5px 0px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--background-2);
+  color: var(--highlight-2);
+  box-sizing: border-box;
+}
+
+.contact-form textarea:focus,
+.contact-form input:focus {
+  outline: var(--highlight-2) solid 2px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input[type="submit"] {
+  cursor: pointer;
+  font-size: large;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.contact-form input[type="submit"]:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}

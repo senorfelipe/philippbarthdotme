@@ -9,10 +9,25 @@ layout: base.liquid
 <article>
   <div class="blog-head">
     <h1>{{ title }}</h1>
+    <div>
+      {% for cat in categories %}
+        <a class="tag" href="/blog/categories/{{ cat | slugify }}">#{{ cat }}</a>
+      {% endfor %}
+    </div>
     <span class="blog-date">{{ page.date | formatDate }}</span>
   </div>
 
   <div>
     {{ content }}
   </div>
+{% comment %} <div class="blog-nav">
+              <a href="">
+                <span class="nav">< Prev</span>
+              </a>
+              <a>
+                <span class="nav">Next ></span>
+              </a>
+  </div> {% endcomment %}
 </article>
+
+<link rel="js" href="/js/post.js" />

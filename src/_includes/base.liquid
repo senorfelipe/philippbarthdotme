@@ -13,6 +13,10 @@
   <body class="page">
     <header>
       <nav class="navbar">
+        <div class="mobile-menu">
+          <div class="mobile-menu-title">Home</div>
+          <div class="mobile-menu-icon" onclick="openMenu()">☰</div>
+        </div>
         <ul class="menu">
           <li>
             <span class="menu-item">
@@ -46,6 +50,15 @@
           </li>
         </ul>
       </nav>
+
+      <div class="navbar-mobile" id="mobileMenu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="/">Home</a>
+        <a href="/programming">Programming</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
     </header>
 
     <main class="content">{{ content }}</main>

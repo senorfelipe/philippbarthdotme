@@ -19,7 +19,39 @@ export default function (eleventyConfig) {
     }
   );
 
-  eleventyConfig.addFilter("preview", function (content, length = 200) {
-    return content.substring(0, length) + "...";
+  eleventyConfig.addFilter("preview", function (post, length = 250) {
+    if (post.length <= length) return post;
+    else {
+      for (var i = length; i < post.length; i++) {
+        if (post.charAt(i) === ".") {
+          return post.substring(0, i) + "...";
+        }
+      }
+    }
   });
+
+  eleventyConfig.addCollection("categories", function(collectionApi) {
+    let categories = new Set();
+    let posts = collectionApi.getFilteredByTag('post');
+    posts.forEach(p => {
+      let cats = p.data.categories;
+      cats.forEach(c => categories.add(c));
+    });
+    return Array.from(categories);
+  });
+
+  eleventyConfig.addFilter("filterByCategory", function(posts, cat) {
+    /*
+    case matters, so let's lowercase the desired category, cat
+    and we will lowercase our posts categories
+    */
+    cat = cat.toLowerCase();
+    let result = posts.filter(p => {
+      let cats = p.data.categories.map(s => s.toLowerCase());
+      return cats.includes(cat);
+    });
+    return result;
+  });
+  
+
 }

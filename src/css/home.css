@@ -8,3 +8,14 @@
     border-radius: var(--border-radius);
     padding: 20px;
 }
+
+.ascii-art {
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 768px) {
+    .ascii-art {
+        font-size: 0.7rem;
+    }
+    
+}
