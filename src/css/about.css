@@ -9,7 +9,7 @@
 .title-text {
   margin: 0;
   flex: 1;
-  align-self: flex-start;
+  align-self: center;
   margin-right: 20px;
 }
 
@@ -105,8 +105,16 @@ img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .title-content {
     flex-direction: column;
+  }
+
+  .img-tape {
+    display: none;
+  }
+
+  .img-tape--3 {
+    display: none;
   }
 }

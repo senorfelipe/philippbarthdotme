@@ -12,11 +12,8 @@
   </head>
   <body class="page">
     <header>
-      <nav class="navbar">
-        <div class="mobile-menu">
-          <div class="mobile-menu-title">Home</div>
-          <div class="mobile-menu-icon" onclick="openMenu()">☰</div>
-        </div>
+      <nav class="navbar" id="navbar">
+
         <ul class="menu">
           <li>
             <span class="menu-item">
@@ -49,6 +46,14 @@
             </span>
           </li>
         </ul>
+        <div class="mobile-menu">
+          <div
+            id="mobile-menu-icon"
+            class="mobile-menu-icon"
+            onclick="openMenu()">☰</div>
+        {% comment %} <div class="mobile-menu-title">Home</div> {% endcomment %}
+        </div>
+
       </nav>
 
       <div class="navbar-mobile" id="mobileMenu">

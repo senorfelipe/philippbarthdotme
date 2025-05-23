@@ -64,4 +64,8 @@
   .post-head-date {
     flex: 1 1 40%;
   }
+
+  .post-preview {
+    font-size: medium;
+  }
 }
