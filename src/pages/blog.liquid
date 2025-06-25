@@ -1,0 +1,42 @@
+---
+layout: base.liquid
+pagination:
+  data: collections.post
+  size: 10
+  alias: posts
+  reverse: true
+---
+
+<link rel="stylesheet" href="/css/blog.css" />
+
+<h2>My Blog</h2>
+
+<div>
+  {% for post in posts %}
+  <div class="post-preview" onclick="window.location.href='{{ post.url }}'">
+    <div class="post-head">
+      <h3 class="post-head-title">{{ post.data.title }}</h3>
+      <span class="post-head-date">{{ post.page.date | formatDate }}</span>
+    </div>
+    <p>{{ post.content | preview }}</p>
+  </div>
+  {% endfor %}
+
+  <div class="blog-nav">
+    {% if pagination.href.previous %}
+    <span class="nav active">
+      <a href=" {{ pagination.href.previous }}">Previous</a>
+    </span>
+    {% else %}
+    <span class="nav"> Previous </span>
+    {% endif %}
+    <span>/</span>
+    {% if pagination.href.next %}
+    <span class="nav active">
+      <a href=" {{ pagination.href.next }}">Next</a>
+    </span>
+    {% else %}
+    <span class="nav"> Next </span>
+    {% endif %}
+  </div>
+</div>
